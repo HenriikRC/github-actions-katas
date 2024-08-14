@@ -61,7 +61,7 @@ jobs:
       - name: Download a single artifact # Name of the step
         uses: actions/download-artifact@v4 # Action to use
         with: # Parameters for the action
-          name: henriikrc/micronaut-app:latest # Name of the artifact to download. Optional. If unspecified, all artifacts for the run are downloaded.
+          name: my-artifact # Name of the artifact to download. Optional. If unspecified, all artifacts for the run are downloaded.
           path: .    # Destination path. Supports basic tilde expansion.  # Optional. Default is $GITHUB_WORKSPACE
       - name: Execute component test
         run: bash ci/component-test.sh
@@ -72,7 +72,7 @@ jobs:
       - name: Download a single artifact # Name of the step
         uses: actions/download-artifact@v4 # Action to use
         with: # Parameters for the action
-          name: henriikrc/micronaut-app:latest # Name of the artifact to download. Optional. If unspecified, all artifacts for the run are downloaded.
+          name: my-artifact # Name of the artifact to download. Optional. If unspecified, all artifacts for the run are downloaded.
           path: .    # Destination path. Supports basic tilde expansion.  # Optional. Default is $GITHUB_WORKSPACE
       - name: Execute performance test
         run: bash ci/performance-test.sh
